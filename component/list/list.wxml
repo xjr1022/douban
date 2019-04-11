@@ -1,0 +1,5 @@
+<view class='list'>{{myPro}}</view>
+<text>{{data1}}</text>
+<view>
+<slot></slot>
+</view>
