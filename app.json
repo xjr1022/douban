@@ -13,6 +13,12 @@
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "list": [
+          {
+            "pagePath": "pages/home/home",
+            "text": "home",
+            "iconPath": "icon/tabBar/my.png",
+            "selectedIconPath": "icon/tabBar/my-click.png"
+          },
       {
         "pagePath": "pages/index/index",
         "text": "首页",
@@ -25,6 +31,7 @@
         "iconPath": "icon/tabBar/my.png",
         "selectedIconPath": "icon/tabBar/my-click.png"
       }
+    
     ]
   }
 }
