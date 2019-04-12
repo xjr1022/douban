@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-      movies:'',
+      movies:[],
       stars:[1,2,3,4,5]
   },
 
@@ -29,7 +29,8 @@ Page({
       fail: () => {},
       complete: () => {}
     });
-      
+   
+   
   
   },  
 
@@ -37,14 +38,17 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    for (const score of [1,2,3,4,5]) {
+      if(((score-1)===parseInt(35/10))&&((35%10)!=0))
+      console.log(score+"次----")
+    }
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

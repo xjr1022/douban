@@ -15,6 +15,7 @@
     flex-wrap: wrap;
 }
 .item {
+    margin-top: 20rpx;
     display: flex;
     flex-direction:column;
 }

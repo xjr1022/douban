@@ -13,9 +13,9 @@
             <text class="item-title">{{item.title}}</text>
             <view class="item-score">
             <view class="item-star-container" wx:for="{{stars}}" wx:for-item="score">
-              <image class="item-star" wx:if="{{score < item.rating.stars/10}}"  src="../../icon/stars/star48_on.png" mode="aspectFit"   />
-                <image class="item-star" wx:elif="{{(score==Math.floor(item.rating.stars/10))&&((item.rating.stars%10)!=0)}}" src="../../icon/stars/star48_half.png" mode="aspectFit"   />
-                <image class="item-star" wx:else src="../../icon/stars/star48_off.png" mode="aspectFit"   />
+              <image class="item-star" data-test="{{item.rating.stars/10}}" wx:if="{{score <= item.rating.stars/10}}"  src="../../icon/stars/star48_on.png" mode="aspectFit"   />
+                <image class="item-star" data-test="{{item.rating.stars/10}}" wx:elif="{{((score-0.5)===item.rating.stars/10)&&((item.rating.stars%10)!=0)}}" src="../../icon/stars/star48_half.png" mode="aspectFit"   />
+                <image class="item-star" data-test="{{item.rating.stars}}" wx:elif="{{score > item.rating.stars/10}}" src="../../icon/stars/star48_off.png" mode="aspectFit"   />
             </view> 
             
                 <text >{{item.rating.average}}</text> 
