@@ -1,6 +1,29 @@
 <view class="home">
 
-<view class="item">
+<view class="hot">
 
+    <view class="header">
+        <text class="title">影院热映</text>
+    </view>
+
+    <view class="section">
+
+        <view class="item">
+            <image class="item-img" mode="aspectFill" src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2551353482.webp"/>
+            <text class="item-title">飞驰人生</text>
+            <view class="item-score">6.3</view>
+        </view>
+        <view class="item">
+            <image class="item-img" mode="aspectFill" src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2551353482.webp"/>
+            <text class="item-title">飞驰人生</text>
+            <view class="item-score">6.3</view>
+        </view>
+         <view class="item">
+            <image class="item-img" mode="aspectFill" src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2551353482.webp"/>
+            <text class="item-title">飞驰人生</text>
+            <view class="item-score">6.3</view>
+        </view>
+    </view>
 </view>
+
 </view>
