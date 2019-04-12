@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-around;
     margin: 0 15rpx;
+    flex-wrap: wrap;
 }
 .item {
     display: flex;
@@ -28,4 +29,11 @@
 .item-score {
     font-size: 23rpx;
     color: grey;
+}
+.item-star-container{
+    display: inline;
+}
+.item-star {
+    width: 24rpx;
+    height: 22.8rpx;
 }

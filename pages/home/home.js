@@ -5,14 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      movies:'',
+      stars:[1,2,3,4,5]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    wx.request({
+      url:'http://localhost/v2/movie/in_theaters?city=嘉兴&start=0&count=10',
+      data: {},
+      header: {'content-type':'json'},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: (result) => {
+        this.setData({
+          movies:result.data.subjects
+        });
+      },
+      fail: () => {},
+      complete: () => {}
+    });
       
+  
   },  
 
   /**
@@ -62,5 +80,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  click(){
+    
+
+      
   }
 })

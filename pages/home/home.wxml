@@ -8,20 +8,18 @@
 
     <view class="section">
 
-        <view class="item">
-            <image class="item-img" mode="aspectFill" src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2551353482.webp"/>
-            <text class="item-title">飞驰人生</text>
-            <view class="item-score">6.3</view>
-        </view>
-        <view class="item">
-            <image class="item-img" mode="aspectFill" src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2551353482.webp"/>
-            <text class="item-title">飞驰人生</text>
-            <view class="item-score">6.3</view>
-        </view>
-         <view class="item">
-            <image class="item-img" mode="aspectFill" src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2551353482.webp"/>
-            <text class="item-title">飞驰人生</text>
-            <view class="item-score">6.3</view>
+        <view class="item" catch:tap="click" wx:for="{{movies}}" wx:key="{{index}}" >
+            <image class="item-img" mode="aspectFill" src="{{item.images.small}}"/>
+            <text class="item-title">{{item.title}}</text>
+            <view class="item-score">
+            <view class="item-star-container" wx:for="{{stars}}" wx:for-item="score">
+              <image class="item-star" wx:if="{{score < item.rating.stars/10}}"  src="../../icon/stars/star48_on.png" mode="aspectFit"   />
+                <image class="item-star" wx:elif="{{(score==Math.floor(item.rating.stars/10))&&((item.rating.stars%10)!=0)}}" src="../../icon/stars/star48_half.png" mode="aspectFit"   />
+                <image class="item-star" wx:else src="../../icon/stars/star48_off.png" mode="aspectFit"   />
+            </view> 
+            
+                <text >{{item.rating.average}}</text> 
+             </view>
         </view>
     </view>
 </view>
